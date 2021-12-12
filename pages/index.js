@@ -11,13 +11,35 @@ function ServiceCard({title}){
 }
 
 
-function PortFolioCard({image}){
+function PortFolioCard({image,type,title}){
   return (
     <div className='portfolio-card'>
       <img src={image} alt="portfolio-thumb" loading='lazy'/>
-      <div className='portfolio-card-gradient'></div>
+      <div className='portfolio-card-gradient'>
+        <div className='portfolio_card_detail'>
+        <h3>{title}</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div className={`portfolio-detail ${"portfolio-detail-"+type}`}>
+        
+      </div>
     </div>
   )
+}
+
+function TeamCard({image}){
+  return (
+    <div className='team-card'>
+      <img src={image} alt="team-thumb" loading='lazy'/>
+      <div className='team-card-gradient'>
+        <div className='team-card-content'>
+          <h3>John Doe</h3>
+          <p>Developer</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 export default function Home() {
   return (
@@ -78,11 +100,23 @@ integrity and providing end results.</p>
         <h3>OUR WORKS</h3>
         <h1>Portfolio</h1>
         <div className='portfolio-cards'>
-          <PortFolioCard image="/plant.jpg"/>
-          <PortFolioCard image="/bottle.jpg"/>
-          <PortFolioCard image="/cactus.jpg"/>
-          <PortFolioCard image="/book.jpg"/>
+          <PortFolioCard image="/plant.jpg" type="plant" title="Plant"/>
+          <PortFolioCard image="/bottle.jpg" type="bottle" title="Bottle"/>
+          <PortFolioCard image="/cactus.jpg" type="cactus" title="Cactus"/>
+          <PortFolioCard image="/book.jpg" type="book" title="Book"/>
         </div>
+        </div>
+      </section>
+      <section className='team-section'>
+        <div className='team_container'>
+          <h3>MEET OUR TEAM</h3>
+          <h1>Our Team</h1>
+          <div className='team-members'>
+            <TeamCard image="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=461&q=80"/>
+            <TeamCard image="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"/>
+            <TeamCard image="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"/>
+            <TeamCard image="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"/>
+          </div>
         </div>
       </section>
     </div>

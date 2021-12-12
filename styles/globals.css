@@ -345,6 +345,7 @@ color: #343434;
   height: 300px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
 
 }
 .portfolio-card:hover  img{
@@ -360,15 +361,71 @@ color: #343434;
 
 }
 
+
 .portfolio-card-gradient{
   width: 100%;
   height: 100%;
   position: absolute;
   bottom: 0;
   opacity: 0;
-  z-index: 3;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 4;
+  
 }
+
+.portfolio_card_detail{
+  position: absolute;
+  top: 35px;
+  left: 15px;
+  width: 85%;
+ 
+}
+.portfolio_card_detail h3{
+  font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 29px;
+
+color: #FFFFFF;
+}
+.portfolio_card_detail p{
+  font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+
+color: #D3D3D3;
+}
+.portfolio-card:hover .portfolio-detail{
+  transform: scale(15);
+}
+.portfolio-detail{
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  z-index: 3;
+  bottom: -50px;
+  right: -50px;
+  border-radius: 50%;
+  transform: scale(0);
+  transform-origin: 0 right;
+  
+  
+}
+.portfolio-detail-plant{
+  background-color: #142807da;
+}
+.portfolio-detail-bottle{
+  background-color: #012D2Cda;
+}
+.portfolio-detail-cactus{
+  background-color: #C94701da;
+}
+.portfolio-detail-book{
+  background-color: #925938da;
+}
+
 
 .portfolio-card:hover .portfolio-card-gradient{
   opacity: 1;
@@ -403,6 +460,64 @@ color: #343434;
   line-height: 78px;
   font-weight: 600;
   }
+}
+
+.team-section{
+  width: 100%;
+  height: 650px;
+  margin-top: 65px;
+}
+.team_container{
+  width: 90%;
+  margin: 25px auto;
+}
+
+.team_container > h3,h1{
+  text-align: center;
+}
+.team_container > h3{
+  font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: 0.05em;
+
+color: #808080;
+}
+.team_container > h1{
+  font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 64px;
+line-height: 78px;
+text-align: center;
+
+color: #343434;
+}
+
+.team-members{
+  display: grid;
+  margin-top: 35px;
+  grid-gap:16px;
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+}
+
+.team-card{
+  width: 100%;
+  position: relative;
+  height: 382px;
+}
+.team-card img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 }
 
 @media screen and (max-width:858px){
@@ -440,6 +555,11 @@ color: #343434;
     font-size: 45px;
     line-height: 45px;
   }
+  .about_content_main >  h1{
+    
+    font-size: 45px;
+  
+  }
 }
 @media screen and (max-width:375px){
   
@@ -447,8 +567,24 @@ color: #343434;
     font-size: 32px;
  
   }
+  .about_content_main >  h1{
+    
+    font-size: 32px;
+  
+  }
   .hero_content > h3{
     font-size: 14px;
  
+  }
+  .about_content_main >  h3{
+    
+    font-size: 14px;
+  
+  }
+  .about_content_main >  p{
+    
+    font-size: 18px;
+    width: 100%;
+  
   }
 }
