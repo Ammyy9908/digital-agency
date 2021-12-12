@@ -14,7 +14,7 @@ function ServiceCard({title}){
 function PortFolioCard({image}){
   return (
     <div className='portfolio-card'>
-      <img src={image} alt="portfolio-thumb"/>
+      <img src={image} alt="portfolio-thumb" loading='lazy'/>
       <div className='portfolio-card-gradient'></div>
     </div>
   )
