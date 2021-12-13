@@ -28,16 +28,19 @@ function PortFolioCard({image,type,title}){
   )
 }
 
-function TeamCard({image}){
+function TeamCard({image,type,name,profession}){
   return (
     <div className='team-card'>
       <img src={image} alt="team-thumb" loading='lazy'/>
       <div className='team-card-gradient'>
         <div className='team-card-content'>
-          <h3>John Doe</h3>
-          <p>Developer</p>
+         <div className='team-content-main'>
+         <h3>{name}</h3>
+          <p>{profession}</p>
+         </div>
         </div>
       </div>
+      <div className={`team-popup ${"team-popup-"+type}`}></div>
     </div>
   );
 }
@@ -53,7 +56,7 @@ export default function Home() {
 integrity and providing end results.</p>
 <button tabIndex={1}>Get Started</button>
         </div>
-        <img src="/banner.jpg" alt="banner" className="banner-image"/>
+        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="banner" className="banner-image"/>
         <div className='banner-gradient'></div>
         <div className='social-links'>
           <a href="#"><img src="/twitter_icon.svg" alt="twitter-icon"/></a>
@@ -92,7 +95,7 @@ integrity and providing end results.</p>
         {/* <img src="/service_image.jpg" alt="service_image" className='mobile_service_image'/> */}
         <div className='service_blank_box'>
           
-          <img src="/service_image.jpg" alt="service_image"/>
+          <img src="https://images.unsplash.com/photo-1596419250611-a022c055f792?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="service_image"/>
         </div>
       </section>
       <section className='portfolio_section'>
@@ -112,10 +115,10 @@ integrity and providing end results.</p>
           <h3>MEET OUR TEAM</h3>
           <h1>Our Team</h1>
           <div className='team-members'>
-            <TeamCard image="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=461&q=80"/>
-            <TeamCard image="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"/>
-            <TeamCard image="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"/>
-            <TeamCard image="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"/>
+            <TeamCard image="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=461&q=80" type="black" name="Angela" profession="Director"/>
+            <TeamCard image="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" type="brown" name="Jane" profession="adminstration"/>
+            <TeamCard image="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" type="green" name="John Doe" profession="WEB DEVELOPER"/>
+            <TeamCard image="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" type="dark-green" name="Emilly" profession="Designer"/>
           </div>
         </div>
       </section>
