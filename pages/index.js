@@ -19,6 +19,7 @@ function PortFolioCard({image,type,title}){
         <div className='portfolio_card_detail'>
         <h3>{title}</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href='#' className={`${type+"-link"}`}>View</a>
         </div>
       </div>
       <div className={`portfolio-detail ${"portfolio-detail-"+type}`}>

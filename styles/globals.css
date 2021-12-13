@@ -5,7 +5,7 @@
   --text-light:#F2F2F2;
   --portfolio-card-width:300px;
   --portfolio-card-height:300px;
-  --banner-gradient:linear-gradient(117.16deg, rgba(32, 48, 196, 0.52) 41.66%, rgba(197, 111, 48, 0.608) 66.95%);
+  --banner-gradient:linear-gradient(117.16deg, rgba(0, 56, 255, 0.8) 41.66%, rgba(255, 108, 0, 0.768) 66.95%);
 }
 html,
 body {
@@ -397,6 +397,22 @@ line-height: 17px;
 
 color: #D3D3D3;
 }
+.portfolio_card_detail a{
+  font-family: Montserrat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 35px;
+  background-color: #fff;
+  margin-top: 5px;
+  font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 17px;
+border-radius: 5px;
+}
 .portfolio-card:hover .portfolio-detail{
   transform: scale(15);
 }
@@ -415,6 +431,18 @@ color: #D3D3D3;
 }
 .portfolio-detail-plant{
   background-color: #142807da;
+}
+.plant-link{
+  color: #142807da;
+}
+.bottle-link{
+  color: #012D2Cda;
+}
+.cactus-link{
+  color: #C94701da;
+}
+.book-link{
+  color: #925938da;
 }
 .portfolio-detail-bottle{
   background-color: #012D2Cda;
