@@ -200,7 +200,7 @@ line-height: 32px;
 
 .services{
   width: 100%;
-  height: 665px;
+  height: 705px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
